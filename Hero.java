@@ -1,4 +1,9 @@
-public class Hero {
+public class Hero implements Comparable<Hero> {
+
+    @Override 
+    public int compareTo(Hero other){
+        return name.compareTo(other.getName());
+    }
 
     // attributs
     private String name;
@@ -28,3 +33,18 @@ public class Hero {
         this.age = age;
     }
 }
+
+
+
+
+
+
+
+/* 
+
+Modifie la classe Hero afin d'implémenter Comparable. 
+L'ordre de tri par défaut sera sur l'attribut name, par ordre croissant.
+
+
+
+*/
